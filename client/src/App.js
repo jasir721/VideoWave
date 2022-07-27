@@ -1,5 +1,5 @@
 import React from 'react';
-import {About,Footer,Header} from './container';
+import {Header} from './container';
 import {Navbar} from './components';
 import './App.scss'
 const App = () => {

@@ -29,7 +29,13 @@ align-items: center;
         font-size: 4em;
     }
 }
-
+.github{
+    margin-right: 6em;
+    margin-left: 60vw;
+    width:4vw;
+    display: flex;
+    justify-content:right;
+}
 .app__navbar-links {
 flex: 1;
 display: flex;

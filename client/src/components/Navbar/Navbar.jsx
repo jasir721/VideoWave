@@ -1,5 +1,6 @@
 import React from 'react';
 import './Navbar.scss';
+import pic from "../../assets/gitimg.png"
 // import {HiMenuAlt4,HiX} from 'react-icons/hi';
 // import {motion} from 'framer-motion';
 const Navbar = () => {
@@ -9,6 +10,8 @@ const Navbar = () => {
     <nav className="app__navbar">
       <div className="app__navbar-logo">
         <h1 className="logo__name">VideoWave</h1>
+        {/* <FontAwesomeIcon icon="fab fa-github" /> */}
+        <a href="https://github.com/jasir721/VideoWave"><img src={pic} alt="Jasir's Github" className='github'></img></a>
       </div>
       {/* <ul className="app__navbar-links">
         {['home', 'about', 'alumni', 'project', 'Contact'].map((item) => (

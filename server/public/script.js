@@ -5,6 +5,7 @@ const myPeer = new Peer(undefined, {
   host: '/',
   port: '3030'
 })
+console.log(userName)
 let myVideoStream;
 const myVideo = document.createElement('video')
 myVideo.muted = true;
@@ -31,12 +32,13 @@ navigator.mediaDevices.getUserMedia({
   // when press enter send message
   $('html').keydown(function (e) {
     if (e.which == 13 && text.val().length !== 0) {
-      socket.emit('message', text.val());
+      $("ul").append(`<li class="message myself"><b>Me</b><br/>${text.val()}</li>`);
+      socket.emit('message', text.val(), userName);
       text.val('')
     }
   });
-  socket.on("createMessage", message => {
-    $("ul").append(`<li class="message"><b>user</b><br/>${message}</li>`);
+  socket.on("createMessage", (message, userName) => {
+    $("ul").append(`<li class="message other"><b>${userName}</b><br/>${message}</li>`);
     scrollToBottom()
   })
 })
@@ -132,11 +134,9 @@ const setPlayVideo = () => {
   `
   document.querySelector('.main__video_button').innerHTML = html;
 }
-const main_right = document.querySelector('.main__right')
-const main_left = document.querySelector('.main__left')
-main_right.style.display = "none"
-main_left.style.flex = "1"
 function hideBox() {
+  const main_right = document.querySelector('.main__right')
+  const main_left = document.querySelector('.main__left')
   if (main_right.style.display === "none") {
     main_right.style.display = "flex"
     main_left.style.flex = "0.8"
@@ -144,5 +144,16 @@ function hideBox() {
   else {
     main_right.style.display = "none"
     main_left.style.flex = "1"
+  }
+}
+
+function copy() {
+  navigator.clipboard.writeText(ROOM_ID);
+  document.querySelector(".copy_button").textContent = "Copied";
+  document.querySelector(".copy_button").style.color = "green";
+  setTimeout(reset, 2000);
+  function reset() {
+    document.querySelector(".copy_button").textContent = "Copy RoomID";
+    document.querySelector(".copy_button").style.color = "red";
   }
 }

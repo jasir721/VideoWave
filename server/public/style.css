@@ -94,11 +94,26 @@
     color: #F5F5F5;
 }
 
-.leave_meeting {
-    color: #EB534B;
-}
+
 
 .unmute, .stop {
     color: #CC3B33;
 }
 
+.leave_meeting {
+    color: #EB534B;
+    font-weight: bolder;
+}
+.copy_button {
+    color: #CC3B33;
+    font-weight: bolder;
+}
+.myself {
+    float: right;
+    clear: both;
+    padding-right: 10px;
+  }
+.other {
+    float: left;
+    clear: both;
+  }

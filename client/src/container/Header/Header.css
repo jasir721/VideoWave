@@ -1,0 +1,139 @@
+.header_container {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header_container .back_motion_left {
+  background-color: var(--darkblue-color);
+  width: 52%;
+  height: 100vh;
+  z-index: 0;
+  margin-right: auto;
+}
+
+.header_container .iit_pkd {
+  position: absolute;
+  width: 31.9vw;
+  height: 79.5vh;
+  left: 3.2vw;
+  top: 14.3vh;
+  z-index: 1;
+  border-radius: 18px;
+  background: url("../../assets/videowave.png");
+  background-color: #9BD4CF;
+  background-size: 60%;
+  background-position-x: center;
+  background-repeat: no-repeat;
+}
+
+.header_container .iit_pkd .host.Mui-contained {
+  background-position: 0em;
+  padding: 1em 2em 1em 2em;
+  color: --darkblue-color;
+}
+
+.header_container .iit_pkd .bqQeCA {
+  left: 2.6vw;
+}
+
+.header_container .iit_pkd .bzFlRo {
+  left: 5vw;
+}
+
+.header_container .back_motion_right {
+  background-color: var(--darkblue-color);
+  width: 16vw;
+  height: 100vh;
+  z-index: 0;
+  margin-left: auto;
+}
+
+.header_container .place_card {
+  position: absolute;
+  width: 26vw;
+  height: 38vh;
+  left: 39.3vw;
+  top: 14.3vh;
+  z-index: 1;
+  border-radius: 18px;
+  background-color: #519298;
+  background-size: contain;
+  background-size: 125%;
+  background-repeat: repeat;
+}
+
+.header_container .place_card .pl {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  vertical-align: middle;
+  margin-top: 25%;
+  padding: 0.25em;
+  font-size: calc(3.5em + 0.390625vw);
+  color: white;
+  font-weight: 500;
+  background-color: #519298;
+}
+
+.header_container .intern_card {
+  position: absolute;
+  width: 26vw;
+  height: 38vh;
+  left: 70.3vw;
+  top: 14.3vh;
+  z-index: 1;
+  border-radius: 18px;
+  background: url("../../assets/intern.png");
+  background-color: #9BD4CF;
+  background-size: 75%;
+  background-repeat: no-repeat;
+}
+
+.header_container .intern_card .pl {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  vertical-align: middle;
+  top: 62%;
+  left: 20%;
+  padding: 0.25em;
+  font-size: calc(3.5em + 0.390625vw);
+  color: var(--head-blue);
+  font-weight: 500;
+}
+
+.header_container .project_card {
+  position: absolute;
+  background-color: #519298;
+  width: 57.1vw;
+  height: 38vh;
+  left: 39.3vw;
+  top: 56.3vh;
+  z-index: 1;
+  border-radius: 18px;
+  background: url("../../assets/project.png");
+  background-color: #519298;
+  background-size: 60%;
+  background-position: -0.5em;
+  background-repeat: no-repeat;
+  background-position-y: -4.9em;
+}
+
+.header_container .project_card .pl {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  vertical-align: middle;
+  top: 30%;
+  left: 20%;
+  padding: 0.25em;
+  font-size: calc(3em + 0.390625vw);
+  color: white;
+  font-weight: 500;
+}
+/*# sourceMappingURL=Header.css.map */

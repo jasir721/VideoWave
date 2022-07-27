@@ -43,8 +43,8 @@ const Header = () => {
 	const inputProps = useInput();
 	const hostHandler=()=>{
 		const hash = uuidV4();
-		const newPath="http://localhost:3030/"+hash;
-		window.open(newPath,"_self");
+		const newPath="http://localhost:3030/";
+		window.open(newPath);
 	}
 	const joinHandler=()=>{
 		const newPath="http://localhost:3030/"+inputProps.value;
